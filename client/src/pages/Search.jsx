@@ -139,7 +139,7 @@ export default function Search() {
             <input
               type='text'
               id='searchTerm'
-              placeholder='Search...'
+              placeholder='Smart Comparison Analytical Search...'
               className='border rounded-lg p-3 w-full'
               value={sidebardata.searchTerm}
               onChange={handleChange}

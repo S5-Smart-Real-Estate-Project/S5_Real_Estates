@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import validator from 'validator';
 
 const listingSchema = new mongoose.Schema(
   {
@@ -50,15 +49,6 @@ const listingSchema = new mongoose.Schema(
     imageUrls: {
       type: Array,
       required: true,
-    },
-    videoUrl: {
-      type: String,
-      validate: {
-        validator: function (v) {
-          return validator.isURL(v) && v.includes("drive.google.com");
-        },
-        message: "Please enter a valid Google Drive link.",
-      },
     },
     userRef: {
       type: String,
